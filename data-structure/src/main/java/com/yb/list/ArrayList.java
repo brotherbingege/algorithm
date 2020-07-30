@@ -12,9 +12,11 @@ public class ArrayList {
     private int size = 16;
     private int currIndex = 0;
 
-    public ArrayList(){
+    public ArrayList()
+    {
         data = new int[size];
     }
+
     public ArrayList(int size)
     {
         this.size = size;
@@ -44,7 +46,7 @@ public class ArrayList {
         for (int i = 0; i < data.length; i++) {
             if (data[i] == obj) {
                 int temp = data[i];
-                System.arraycopy(data, i + 1, data, i, data.length - i);
+                System.arraycopy(data, i + 1, data, i, data.length - i - 1);
                 return temp;
             }
         }
@@ -122,6 +124,7 @@ public class ArrayList {
         al.add(3);
         al.add(4);
         al.add(5);
+        al.remove(4);
         al.printList();
 
     }
